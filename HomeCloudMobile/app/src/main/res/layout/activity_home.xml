@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+
+    tools:context=".HomeActivity">
+
+    <Switch
+        android:id="@+id/appMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Server Mode"
+        android:textSize="20dp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/appMode"
+        android:layout_marginTop="30dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/networkDiscoveryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Network Discovery"
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/startStopServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/networkDiscoveryText"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="handleStartStopServer"
+        android:text="@string/startStopServer" />
+
+    <Button
+        android:id="@+id/startStopDiscovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startStopServer"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="handleStartStopDiscovery"
+        android:text="@string/startStopDiscovery" />
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/startStopDiscovery"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/watchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="handleWatchDirectory"
+        android:text="Watch a Directory" />
+
+    <Button
+        android:id="@+id/fileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/watchDirectory"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="handleFileTransfer"
+        android:text="File Transfer" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/fileTransfer"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider3"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+
+        android:text="Status: "
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/statusMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider3"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/status"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20dp"
+        android:text="" />
+
+</RelativeLayout>

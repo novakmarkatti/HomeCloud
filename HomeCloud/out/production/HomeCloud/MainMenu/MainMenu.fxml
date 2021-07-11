@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenu.MainMenuController">
+   <children>
+      <AnchorPane layoutX="34.0" layoutY="43.0" prefHeight="521.0" prefWidth="573.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <AnchorPane layoutX="330.0" layoutY="61.0" maxWidth="294.0" prefHeight="378.0" prefWidth="294.0" style="-fx-background-color: white; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="61.0">
+               <children>
+                  <Button layoutX="158.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleHelpBtn" prefHeight="25.0" prefWidth="47.0" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Help" AnchorPane.bottomAnchor="348.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Label fx:id="lblAppMode" layoutX="31.0" layoutY="47.0" prefHeight="25.0" prefWidth="111.0" text="Server Mode" AnchorPane.bottomAnchor="312.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="47.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="143.0" text="Network Discovery" AnchorPane.bottomAnchor="221.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="102.0" AnchorPane.topAnchor="143.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="startStopServer" layoutX="35.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleStartStopServer" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Start server" AnchorPane.bottomAnchor="179.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="180.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="startStopDiscovery" disable="true" layoutX="123.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleStartStopDiscovery" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Start discovery" AnchorPane.bottomAnchor="179.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="180.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="startFileTransfer" disable="true" layoutX="84.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleFileTransfer" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="File transfer" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="292.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="startWatchService" disable="true" layoutX="70.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleWatchDirectory" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Directory listener" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="250.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Label layoutX="35.0" layoutY="346.0" text="Status:" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="178.0" AnchorPane.topAnchor="346.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Line endX="102.0" layoutX="126.0" layoutY="129.0" startX="-105.0" AnchorPane.bottomAnchor="254.5" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="128.5" />
+                  <Button layoutX="107.0" layoutY="92.0" mnemonicParsing="false" onAction="#changeAppMode" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Change appmode" AnchorPane.bottomAnchor="267.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="92.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="exitBtn" layoutX="205.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleExitBtn" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Exit" AnchorPane.bottomAnchor="348.0" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Text fx:id="statusMessage" fill="RED" layoutX="83.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.0" AnchorPane.bottomAnchor="20.98828125" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="347.05078125">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Line endX="102.0" layoutX="128.0" layoutY="229.0" startX="-105.0" AnchorPane.rightAnchor="20.0" />
+                  <Line endX="102.0" layoutX="131.0" layoutY="335.0" startX="-105.0" AnchorPane.rightAnchor="20.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="29.0" layoutY="28.0" prefHeight="468.0" prefWidth="315.0" style="-fx-background-color: linear-gradient(to right top, #d16b6b, #cf865b, #c0a25e, #abbb77, #94d1a0, #6bc9ad, #40bfbd, #1ab3ca, #008cb9, #0064a3, #003c84, #0e125c); -fx-background-radius: 1em;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="37.0" layoutY="73.0" prefHeight="412.0" prefWidth="315.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="HomeCloud" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="62.0" prefWidth="237.0" text="Synchronize your files with ease" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

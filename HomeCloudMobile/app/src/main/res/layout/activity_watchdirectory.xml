@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Switch
+        android:id="@+id/appModeWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Server Mode"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/appModeWatchDirectory"
+        android:layout_marginTop="40dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textByAppModeWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appModeWatchDirectory"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"
+        android:text="ORIGIN path:"
+        android:textColor="#000000"
+        android:textSize="21sp" />
+
+    <Button
+        android:id="@+id/selectDirectoryWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appModeWatchDirectory"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toEndOf="@+id/textByAppModeWatchDirectory"
+        android:onClick="chooseDirectory"
+        android:text="@string/selectDirectory" />
+
+    <TextView
+        android:id="@+id/filePathWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appModeWatchDirectory"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text=""
+        android:textColor="#808080"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/text2ByAppModeWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filePathWatchDirectory"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="30dp"
+        android:text="Event changes: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text2ByAppModeWatchDirectory"
+        android:layout_above="@+id/buttonTaroloWatchDirectory"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#F5F5F5">
+        <LinearLayout
+            android:id="@+id/listWatchDirectory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonTaroloWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkFailedFiles"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/startStopServerWatchDirectory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleStartStopServer"
+            android:text="@string/startStopServer" />
+
+        <Button
+            android:id="@+id/startStopClientWatchDirectory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/startStopServerWatchDirectory"
+            android:layout_marginStart="30dp"
+            android:onClick="handleStartStopClient"
+            android:text="@string/startStopClient" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/checkFailedFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dividerWatchDirectory"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="handleCheckFailedFiles"
+        android:text="Check failed files" />
+
+    <View
+        android:id="@+id/dividerWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_above="@+id/statusWatchDirectory"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/statusWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:text="Status: "
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/statusMsgWatchDirectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerWatchDirectory"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/statusWatchDirectory"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:text=""
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20sp" />
+
+</RelativeLayout>

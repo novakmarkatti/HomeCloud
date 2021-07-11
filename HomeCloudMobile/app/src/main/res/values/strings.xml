@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HomeCloudMobile</string>
+    <string name="welcome_screen1">HomeCloudMobile</string>
+    <string name="welcome_screen2">Synchronize youre files with ease</string>
+    <string name="startStopDiscovery">Start Discovery</string>
+    <string name="startStopServer">Start Server</string>
+    <string name="selectDirectory">Select directory</string>
+    <string name="startStopClient">Start Client</string>
+
+</resources>

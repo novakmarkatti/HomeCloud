@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Switch
+        android:id="@+id/appModeFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Server Mode"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/appModeFileTransfer"
+        android:layout_marginTop="40dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textByAppModeFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appModeFileTransfer"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="30dp"
+        android:text="TARGET path:"
+        android:textColor="#000000"
+        android:textSize="21dp" />
+
+    <Button
+        android:id="@+id/selectDirectoryFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appModeFileTransfer"
+        android:layout_marginTop="60dp"
+        android:layout_toEndOf="@+id/textByAppModeFileTransfer"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="chooseDirectory"
+        android:text="@string/selectDirectory" />
+
+    <TextView
+        android:id="@+id/filePathFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appModeFileTransfer"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text=""
+        android:textColor="#808080"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/text2ByAppModeFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filePathFileTransfer"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="30dp"
+        android:text="Transfered files: "
+        android:textColor="#000000"
+        android:textSize="18dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text2ByAppModeFileTransfer"
+        android:layout_above="@+id/buttonTaroloFileTransfer"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#F5F5F5">
+        <LinearLayout
+            android:id="@+id/listFileTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonTaroloFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dividerFileTransfer"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/startStopServerFileTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleStartStopServer"
+            android:text="@string/startStopServer" />
+
+        <Button
+            android:id="@+id/startStopClientFileTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/startStopServerFileTransfer"
+            android:layout_marginStart="30dp"
+            android:onClick="handleStartStopClient"
+            android:text="@string/startStopClient" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dividerFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_above="@+id/statusFileTransfer"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/statusFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:text="Status: "
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/statusMsgFileTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerFileTransfer"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/statusFileTransfer"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:text=""
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20dp" />
+
+</RelativeLayout>

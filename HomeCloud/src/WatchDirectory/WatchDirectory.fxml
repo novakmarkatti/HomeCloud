@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="350.0" prefWidth="546.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WatchDirectory.WatchDirectoryController">
+   <children>
+      <AnchorPane prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: grey; -fx-background-radius: 2em;">
+         <children>
+            <Button fx:id="backToMenu" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackToMenu" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Back to menu" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="125.0" layoutY="21.0" mnemonicParsing="false" onAction="#changeAppMode" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Change appmode" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="appMode" fill="ORANGE" layoutX="423.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Mode" AnchorPane.rightAnchor="19.0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="appModeText1" layoutX="27.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Device 1 : Choose the ORIGIN path to listen a directory :  " AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="75.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="440.0" layoutY="104.0" mnemonicParsing="false" onAction="#chooseDirectory" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Select directory" AnchorPane.bottomAnchor="222.0" AnchorPane.rightAnchor="19.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="pathTextField" layoutX="20.0" layoutY="102.0" prefHeight="27.0" prefWidth="498.0" promptText="Choose or write in a directory" AnchorPane.bottomAnchor="221.0" AnchorPane.leftAnchor="19.0" />
+            <ListView fx:id="listView" layoutX="19.0" layoutY="172.0" prefHeight="118.0" prefWidth="526.0" style="-fx-background-radius: 0.5em;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" />
+            <Text fx:id="appModeText2" layoutX="27.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Device 1 : Event changes in the selected directory : " AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="startStopServer" layoutX="33.0" layoutY="304.0" mnemonicParsing="false" onAction="#handleStartStopServer" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Start server" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="startStopClient" disable="true" layoutX="125.0" layoutY="304.0" mnemonicParsing="false" onAction="#handleStartStopClient" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Start client" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="110.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text layoutX="281.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Directory listener :" AnchorPane.rightAnchor="124.7216796875">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="241.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status : " AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="335.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="statusMsg" fill="ORANGE" layoutX="303.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="400.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="checkFailedFiles" layoutX="187.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleCheckFailedFiles" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Check failed files" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="200.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

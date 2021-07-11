@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical"
+    tools:context=".Help">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to use this app?"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  This application should be used on 2 devices simultaneously.
+In order to do that, the first step is Network Discovery: in 'Server Mode' with
+the 'Start Server' button you can start the server. After that, on the other
+device switch to 'Client Mode', and with the 'Start Discovery' button the client
+will be started. It doesn't matter which device is the server or the client.
+If your devices are on the same Wi-fi network, they should find each other.
+After the connection is established, 2 buttons called 'Watch a directory'
+and 'File transfer' will be enabled."
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="Watch a directory"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Choose a directory to 'watch' (ORIGIN path).
+If you move a file / folder to the given path, the program will notice , then
+will synchronize the files to the marked folder on the other device (TARGET path).
+Usage is similar to the Network Discovery: with the 'Start Server' you
+start the directory watching , then in the other device switch to 'Client Mode'
+to 'Start Client', which designate where the files will be transferred. When you
+finished , before exit press 'Check failed files' because this will check if
+some file failed during the process, then send them again."
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="File transfer"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Choose a directory, then transfer the newer or
+non existable files to the other device. Usage is similar to the Network Discovery:
+with the 'Start Server' you determine the path where the files will be transferred
+(TARGET path). In the other device switch to 'Client Mode' to 'Start Client',
+then files in this directory will be transferred to the other device (ORIGIN path)."
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
